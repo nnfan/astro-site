@@ -1,67 +1,65 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+@import "./variables.css";
+
 body {
-	font-family: Verdana, sans-serif;
+	line-height: 1.6;
+	font-family: var(--font-sans);
 	margin: auto;
 	padding: 20px;
 	max-width: 65ch;
-	text-align: left;
-	background-color: #fff;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	line-height: 1.5;
-	color: #444;
+	background-color: var(--background-primary);
+	color: var(--text-normal);
+	font-size: var(--font-text-size);
+	-webkit-font-smoothing: antialiased;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-	color: #222;
-}
+
 a {
-	color: #3273dc;
+	color: var(--color-link);
 }
-nav a {
-	margin-right: 10px;
+
+blockquote {
+	border: 1px solid var(--color-base-30);
+	color: var(--text-normal);
+	padding: 2px 0px 2px 20px;
+	margin: 0px;
+	font-style: italic;
 }
-textarea {
-	width: 100%;
-	font-size: 16px;
+
+code {
+	background-color: var(--background-modifier-border);
+	border-radius: var(--border-radius);
+	display: inline-block;
+	padding: 0 0.4rem;
 }
-input {
-	font-size: 16px;
+
+hr {
+	border: 0;
+	border-top: solid 1px var(--background-modifier-border);
 }
-content {
-	line-height: 1.6;
-}
-table {
-	width: 100%;
-}
+
 img {
 	max-width: 100%;
 	height: auto;
 }
-code {
-	padding: 2px 5px;
-	background-color: #f2f2f2;
-}
+
 pre {
 	padding: 1rem;
 }
-pre > code {
+
+pre>code {
 	all: unset;
 }
-blockquote {
-	border: 1px solid #999;
-	color: #222;
-	padding: 2px 0px 2px 20px;
-	margin: 0px;
-	font-style: italic;
+
+/* Tables */
+table {
+	width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+	border-collapse: collapse;
+
+	& td,
+	& th,
+	& tr {
+		padding: 0.4rem 0.8rem;
+		border: 1px solid var(--background-modifier-border);
+	}
 }
