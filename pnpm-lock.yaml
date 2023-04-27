@@ -6,7 +6,7 @@ dependencies:
     version: 6.2.2(astro@2.3.1)
   '@astrojs/mdx':
     specifier: ^0.19.0
-    version: 0.19.0(astro@2.3.1)
+    version: 0.19.0(astro@2.3.1)(rollup@3.21.0)
   '@astrojs/rss':
     specifier: ^2.3.2
     version: 2.3.2
@@ -97,14 +97,14 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx@0.19.0(astro@2.3.1):
+  /@astrojs/mdx@0.19.0(astro@2.3.1)(rollup@3.21.0):
     resolution: {integrity: sha512-McFpMV+npinIEKnY5t9hsdzLd76g78GgIRUPxem2OeXPNB8xr2pNS28GeU0+6Pn5STnB+sgcyyeqXLgzauOlMQ==}
     engines: {node: '>=16.12.0'}
     dependencies:
       '@astrojs/markdown-remark': 2.1.4(astro@2.3.1)
       '@astrojs/prism': 2.1.1
       '@mdx-js/mdx': 2.3.0
-      '@mdx-js/rollup': 2.3.0
+      '@mdx-js/rollup': 2.3.0(rollup@3.21.0)
       acorn: 8.8.2
       es-module-lexer: 1.2.1
       estree-util-visit: 1.2.1
@@ -691,13 +691,14 @@ packages:
       - supports-color
     dev: false
 
-  /@mdx-js/rollup@2.3.0:
+  /@mdx-js/rollup@2.3.0(rollup@3.21.0):
     resolution: {integrity: sha512-wLvRfJS/M4UmdqTd+WoaySEE7q4BIejYf1xAHXYvtT1du/1Tl/z2450Gg2+Hu7fh05KwRRiehiTP9Yc/Dtn0fA==}
     peerDependencies:
       rollup: '>=2'
     dependencies:
       '@mdx-js/mdx': 2.3.0
-      '@rollup/pluginutils': 5.0.2
+      '@rollup/pluginutils': 5.0.2(rollup@3.21.0)
+      rollup: 3.21.0
       source-map: 0.7.4
       vfile: 5.3.7
     transitivePeerDependencies:
@@ -744,7 +745,7 @@ packages:
       escalade: 3.1.1
     dev: false
 
-  /@rollup/pluginutils@5.0.2:
+  /@rollup/pluginutils@5.0.2(rollup@3.21.0):
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -756,6 +757,7 @@ packages:
       '@types/estree': 1.0.1
       estree-walker: 2.0.2
       picomatch: 2.3.1
+      rollup: 3.21.0
     dev: false
 
   /@types/acorn@4.0.6:
