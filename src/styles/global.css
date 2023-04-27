@@ -1,65 +1,63 @@
-@import "./variables.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-	line-height: 1.6;
-	font-family: var(--font-sans);
-	margin: auto;
-	padding: 20px;
-	max-width: 65ch;
-	background-color: var(--background-primary);
-	color: var(--text-normal);
-	font-size: var(--font-text-size);
-	-webkit-font-smoothing: antialiased;
-}
+@layer base {
+	body {
+		@apply m-auto max-w-3xl p-4 font-sans text-lg antialiased dark:bg-gray-950 dark:text-gray-300;
+	}
 
-a {
-	color: var(--color-link);
-}
+	a {
+		@apply text-blue-600 dark:text-yellow-400;
+	}
 
-blockquote {
-	border: 1px solid var(--color-base-30);
-	color: var(--text-normal);
-	padding: 2px 0px 2px 20px;
-	margin: 0px;
-	font-style: italic;
-}
+	article {
+		@apply pt-8;
+	}
 
-code {
-	background-color: var(--background-modifier-border);
-	border-radius: var(--border-radius);
-	display: inline-block;
-	padding: 0 0.4rem;
-}
+	article h1 {
+		@apply text-center;
+	}
 
-hr {
-	border: 0;
-	border-top: solid 1px var(--background-modifier-border);
-}
+	blockquote {
+		@apply m-0 py-0 pl-4 border-0 border-l-4 border-solid border-s-blue-600;
+	}
 
-img {
-	max-width: 100%;
-	height: auto;
-}
+	code {
+		@apply inline-block px-1.5 text-sm rounded bg-gray-100 dark:bg-gray-700;
+	}
 
-pre {
-	padding: 1rem;
-}
+	hr {
+		@apply border-t border-solid border-gray-200 dark:border-gray-700;
+	}
 
-pre>code {
-	all: unset;
-}
+	img {
+		@apply max-w-full h-auto;
+	}
 
-/* Tables */
-table {
-	width: 100%;
-	overflow-x: auto;
-	white-space: nowrap;
-	border-collapse: collapse;
+	pre {
+		@apply p-4;
+	}
 
-	& td,
-	& th,
-	& tr {
-		padding: 0.4rem 0.8rem;
-		border: 1px solid var(--background-modifier-border);
+	pre>code {
+		@apply bg-transparent;
+	}
+
+	main a {
+		@apply no-underline hover:underline visited:text-blue-800 dark:visited:text-yellow-600;
+	}
+
+	nav>a {
+		@apply no-underline hover:underline;
+	}
+
+	table {
+		@apply w-full overflow-x-auto whitespace-nowrap border-collapse;
+	}
+
+	table td,
+	table th,
+	table tr {
+		@apply py-1 px-2 border border-solid border-gray-200 dark:border-gray-700;
 	}
 }
