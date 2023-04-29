@@ -20,7 +20,7 @@ const posts = (await getCollection('blog')).sort(
 		<Header />
 		<main>
 			<section>
-				<ul class="list-none ps-0 leading-loose">
+				<ul>
 					{
 						posts.map((post) => (
 							<li>

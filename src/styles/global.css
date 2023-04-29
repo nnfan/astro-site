@@ -8,7 +8,7 @@
 	}
 
 	a {
-		@apply text-blue-600 dark:text-yellow-400;
+		@apply no-underline hover:underline underline-offset-4 dark:text-yellow-400;
 	}
 
 	article {
@@ -43,12 +43,11 @@
 		@apply bg-transparent;
 	}
 
-	main a {
-		@apply no-underline hover:underline visited:text-blue-800 dark:visited:text-yellow-600;
+	main{
+		@apply tabular-nums;
 	}
-
-	nav>a {
-		@apply no-underline hover:underline;
+	main a {
+		@apply dark:visited:text-yellow-600;
 	}
 
 	table {
@@ -59,5 +58,9 @@
 	table th,
 	table tr {
 		@apply py-1 px-2 border border-solid border-gray-200 dark:border-gray-700;
+	}
+
+	ul {
+		@apply list-none ps-0 leading-loose;
 	}
 }
