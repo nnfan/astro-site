@@ -43,9 +43,6 @@
 		@apply bg-transparent;
 	}
 
-	main{
-		@apply tabular-nums;
-	}
 	main a {
 		@apply dark:visited:text-yellow-600;
 	}
@@ -58,6 +55,10 @@
 	table th,
 	table tr {
 		@apply py-1 px-2 border border-solid border-gray-200 dark:border-gray-700;
+	}
+
+	time {
+		@apply tabular-nums;
 	}
 
 	ul {
