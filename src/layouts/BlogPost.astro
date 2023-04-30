@@ -23,12 +23,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<slot />
 				<hr />
 				<div class="text-sm text-gray-400">
-					<span class="inline-block w-20">published: </span>
+					<span class="inline-block w-16">posted: </span>
 					<FormattedDate date={pubDate} />
 					{
 						updatedDate && (
 							<div>
-								<span class="inline-block w-20">updated: </span><FormattedDate date={updatedDate} />
+								<span class="inline-block w-16">updated: </span><FormattedDate date={updatedDate} />
 							</div>
 						)
 					}
